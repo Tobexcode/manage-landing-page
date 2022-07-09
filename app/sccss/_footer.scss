@@ -1,0 +1,207 @@
+.footer {
+    background-color: $Verydarkblue;
+    color: $white;
+    padding: 2.5rem;
+    text-align: center;
+
+   
+
+    .container{
+        display: flex;
+        flex-direction: column;
+
+         @include breakpoint-up(large){
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 3fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "logo links1 links2 search" 
+        "social links1 links2 copyright";
+        gap: 1rem;
+        justify-items: start;
+    }
+    }
+
+    a{
+        color: $white;
+    }
+
+    &__first{
+        display: flex;
+        flex-direction: column;
+        order: 2;
+    }
+
+    &__logo {
+        order: 2;
+        align-items: center;
+
+        img {
+
+            @include breakpoint-down(medium){
+                // width: 162px;
+                height: 30px;
+            }
+        }
+
+        
+       
+        // display: inline-block;
+
+        @include breakpoint-down(medium){
+            // width: 160px;
+            // height: 32px;
+            margin-bottom: 1.875rem;
+        }
+
+        @include breakpoint-up(large){
+            grid-area: logo;
+        }
+
+    }
+
+    &__social {
+        order: 1;
+
+
+        @include breakpoint-down(medium){
+            margin-bottom: 1.875rem;
+        }
+
+         @include breakpoint-up(large){
+            grid-area: social;
+            align-self: end;
+        }
+        a{
+            
+            display: inline-block;
+            height: 1.25rem;
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+                // width: 32px;
+                // height: 32px;
+                // img {
+                //     width: 32px;
+                //     height: 32px;
+                // }
+            }
+
+            &:hover svg path {
+                fill: $brightred;
+            }
+        }
+    
+        a:not(:last-child){
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9375rem;
+
+        @include breakpoint-up(large){
+            align-items: start;
+            justify-content: space-between;
+        }
+        &.col1 {
+
+            @include breakpoint-up(large){
+                grid-area: links1;
+            }
+        }
+
+        &.col2 {
+            @include breakpoint-down(medium){
+                margin-bottom: 1.875rem;
+            }
+
+            @include breakpoint-up(large){
+                // grid-area: links2;
+            }
+        }
+        a{
+            line-height: 2.25rem;
+            transition: color 150ms ease-in-out;
+
+            &:hover {
+                color: $brightred;
+            }
+        }
+    }
+    &__linkss{
+
+        @include breakpoint-down(medium){
+        margin-bottom: 50px;  
+        height: 100%;
+        display: flex;
+        justify-content: space-between;  
+        }
+        
+    }
+    &__text{
+        // order: 1;
+        border: 0;
+        padding: 0.8125rem 1.7rem;
+        // width: 100px;
+        // height: 1.5625rem;
+        // padding: 0 10px;
+        font-size: $font-small;
+        border-radius: 30px;
+        outline: 0;
+    }
+    &__btn{
+    // height: 8%;
+    // order: 1;
+    padding: 0.8125rem 1.7rem;
+    background-color: $brightred;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    font-weight: 500;
+    color: $white;
+    font-family: 'Be Vietnam Pro';
+    font-size: $font-small;
+    flex-wrap: 0 0 0.2px;
+    white-space: nowrap;
+    }
+
+    &__search {
+        white-space: nowrap;
+
+        @include breakpoint-down(medium){
+        margin-bottom: 60px;
+        // order: 1;
+        // display: inline-block;
+        }
+
+        @include breakpoint-up(large){
+            text-align: end;
+            justify-self: end;
+        }
+
+        // a.button {
+        //     margin-bottom: 1.875rem;
+
+
+        // }
+    }
+
+    &__copyright {
+        order: 4;
+        font-size: 0.8125rem;
+        color: $darkgrayishblue;
+
+
+        @include breakpoint-up(large){
+            grid-area: copyright;
+            text-align: end;
+            justify-self: end;
+        }
+
+    }
+}

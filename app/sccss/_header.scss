@@ -1,0 +1,116 @@
+.header { 
+
+    &.open {
+        // .overlay {
+        //     display: block;
+
+        // }
+
+
+        // this is where the animations are implemented. characteristics can be defined in a css class
+        .header__toggle{
+            
+            >span:first-child {
+                transform: rotate(46deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            >span:last-child{
+                transform: rotate(-45deg);
+            }
+        }   
+    }
+    
+    .overlay {
+        opacity: 0;
+        position: fixed; //An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+        top: 0px; // to remove the top margin so when it scrolls it dosent look weird
+        right: 0px;
+         bottom: 0px;
+         left: 0px;
+         background-image: linear-gradient(transparent,$darkblue );
+    }
+
+    nav {
+        background-color: transparent;
+        position: relative;
+        // padding: 1.0625rem 1.5rem;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+
+    }
+    img{
+        width: 9.125em;
+        height: 1.6875rem;
+
+    }
+
+    &__toggle{
+        // mobile toggle
+        > span {
+            display: block; //A display property with a value of "block" results in a line break between the two elements or spans.
+            width: 26px;
+            height: 2px;
+            background-color: $Verydarkblue;
+            transform-origin: 3px 1px;
+            transition: all 300ms ease-in-out;
+
+            &:not(:last-child){
+                margin-bottom: 5px;
+            }
+        } 
+
+
+        
+    }
+    
+    &__menu{
+        width: calc(100% - 5rem);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $white; 
+        padding: 1.625rem;
+        margin-top: 1.5rem;
+        border-radius: 3px;
+        z-index: 1;
+
+
+    a {
+        display: block;
+        color: $darkblue;
+        padding: 0.625rem;
+        text-align: center;
+        font-weight: 500;
+        font-size: $font-lg;
+    
+    }
+    
+    }
+
+
+    &__link{
+        // margin-right: 13.3125rem;
+        // margin-left: 12.6875rem;
+        a{
+         font-size: $font-small;
+         font-weight: 500;
+         color: $darkblue;
+         transition: color 200ms ease-in-out;
+
+         &:not(:last-child){
+            margin-right: 32px;  
+         }
+         &:hover {
+             color: $darkgrayishblue;
+        }
+    }
+}
+    &__cta {
+        font-size: $font-small;
+        color: $white;
+    }
+
+    
+}

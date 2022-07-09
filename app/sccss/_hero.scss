@@ -1,0 +1,101 @@
+.hero {
+
+    
+
+
+
+
+
+    
+    .container {
+        margin-top: 2.9375rem;
+
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    
+
+    &__image {
+        background-image: url("/images/illustration-intro.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 25.5rem;
+        background-size: 90%;
+
+        @include breakpoint-up(medium) {
+          height: 500px;
+            background-size: 55%;
+            // width: 100%;
+            // align-items: center;
+            // background-position: 5% 50%;
+        }
+        
+        @include breakpoint-up(large) {
+            background-size: 89%;
+            size: 15rem;
+            // align-items: center;
+            width: 160%;
+            height: 490px;
+            // flex: 3;
+            order: 2;
+          
+           // background-position: left center;
+            //background-image: url('/images/bg-intro-desktop.svg');
+      }
+    }
+    &__text {
+
+        text-align: center;
+        padding-bottom: 0rem;
+        padding-top: 0;
+        @include breakpoint-up(small) {
+        
+        }
+
+        
+  
+        @include breakpoint-up(medium) {
+          padding-right: 100px;
+          padding-left: 100px;
+
+
+        }
+  
+        @include breakpoint-up(large) {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          text-align: left;
+       }
+       h1{
+           margin-bottom: 2.9375rem;
+       }
+    
+  
+      p {
+        line-height: 1.5;
+        margin-bottom: 2rem;
+
+        // @include breakpoint-up(medium) {
+        //   padding-left: 110px;
+        //   padding-right: 110px;
+        // }
+
+        @include breakpoint-up(large) {
+          line-height: 1.5;
+          margin-bottom: 2.6875rem;
+        }
+
+      }
+    }
+    &__button{
+      @include breakpoint-up(medium) {
+      margin-bottom: 100px;
+      }
+    }
+
+
+}

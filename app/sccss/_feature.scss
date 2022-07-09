@@ -1,0 +1,130 @@
+.feature {
+
+    @include breakpoint-up(large) {
+    margin-top: 140px;
+    }
+
+    padding-top: 0rem;
+    &__whole {
+        @include breakpoint-up(large) {
+            display: flex;
+            // flex-wrap: wrap;
+            // align-items: center;
+        }
+    }
+
+    &__content{
+        padding: 0;
+    }
+
+
+
+    &__grid {
+       
+
+        @include breakpoint-down(medium) {}
+        @include breakpoint-up(large) {
+            // margin-left: 9rem;
+             
+            display: flex;
+            flex-wrap: wrap;
+            // flex: 1 1.5 6000px;
+        }
+
+        
+    }
+
+    &__title{
+        margin-top: 0.7rem;
+        margin-bottom: 1.875rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-size: $font-small;
+        line-height: 1.15;
+        color: $darkblue;
+        text-align: center;
+
+         @include breakpoint-down(medium) {
+          margin-top: 0.8rem; 
+          margin-left: 0.9375rem;
+          
+        }
+    }
+    
+    &__box{
+
+        @include breakpoint-down(medium) {
+        margin-bottom: 1.25rem;
+        height: 2.6rem;
+        border-bottom-left-radius: 3rem;
+        border-top-left-radius: 3rem;
+        display: flex;
+        // margin-bottom: 3rem;
+        background-color: $Verypalered;
+        width: calc(155%);
+        margin: none;
+        }
+        
+
+        @include breakpoint-up(large) {
+            display: flex;
+            background-color: transparent;
+        
+        }
+        
+    }
+    // &__what{
+    //   width: 427px;      
+    // }
+
+    // &__manage{
+        
+    // }
+    &__text{
+        margin: 0rem;
+        flex-wrap: wrap;
+
+        @include breakpoint-up(large) {
+           margin-left: 1.125rem; 
+        }
+        
+    }
+    &__item{
+        display: flex;
+        // flex-wrap: wrap;
+    }
+
+    &__description{
+        margin: 0;
+        margin-bottom: 2.6875rem;
+        text-align: left;
+    }
+    &__intro{
+
+
+        @include breakpoint-up(medium) {
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: center;
+        }
+        @include breakpoint-up(large) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        min-width: 420px;
+        text-align: left;
+        margin-right: 150px;
+        }
+        
+        h2{
+            // font-weight: 500;
+            // flex-shrink: 0;
+            
+            // text-align: center;
+        }
+
+        p{
+            margin-bottom: 60px;
+        }
+    }
+
+}

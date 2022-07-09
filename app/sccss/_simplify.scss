@@ -1,0 +1,51 @@
+.simplify{
+    height: 220px;
+    width: 100%;
+    // margin: 0 auto;
+    // position: relative;
+    background-color: $brightred;
+    display: flex;
+    background-image: url("/images/bg-simplify-section-desktopnew.svg");
+
+
+    @include breakpoint-down(medium) {
+    background-image: url("/images/bg-tablet-patternnew.svg");  
+    }
+    @include breakpoint-down(small) {
+    background-image: url("/images/bg-simplify-section-mobilenew.svg");  
+    }
+
+
+
+
+    &__content{
+        width: 100%;
+        display: flex;
+        
+        align-items: center;
+        justify-content: space-between;
+        
+        h2{
+            color: white;
+        }
+    }
+
+    &__text{
+        // width: 437px;
+        line-height: 1;
+        width: 435px;
+    }
+
+    &__button{
+        color: $brightred;
+        box-shadow: none;
+        background-color: white;
+        white-space: nowrap;
+        box-shadow: 0px 15px 20px rgba(42, 48, 45, 0.4);
+        // align-items: flex-end;
+        // flex: 2;
+        display: inline-block;
+        // min-width: 70px;
+    
+    }
+}

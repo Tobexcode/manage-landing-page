@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: boarder-box;
           box-sizing: boarder-box;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -804,7 +805,8 @@ button:hover::before, .button:hover::before {
         grid-template-columns: 2fr 1fr 1fr 3fr;
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
-        grid-template-areas: "logo links1 links2 search"  "social links1 links2 copyright";
+        grid-template-areas: "logo links1 links2 search" 
+ "social links1 links2 copyright";
     gap: 1rem;
     justify-items: start;
   }
